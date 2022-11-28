@@ -3,10 +3,10 @@ import "./App.css";
 
 function App() {
   const shoppingList = [
-    { productName: "soap kit", price: 30, productPhoto: "product1.jpeg" },
-    { productName: "hands soap", price: 20, productPhoto: "product2.jpeg" },
-    { productName: "comb", price: 10, productPhoto: "product3.jpeg" },
-    { productName: "shampoo", price: 50, productPhoto: "product4.jpeg" },
+    { productName: "soap kit", price: 30, productPhoto: "product1.jpeg", store:"laline", desc:"a bunch of soaps", pic:"prod1_other.jpeg" },
+    { productName: "hands soap", price: 20, productPhoto: "product2.jpeg", store:"lydl", desc:"product you use to wash your hand", pic:"prod2_other.jpeg" },
+    { productName: "comb", price: 10, productPhoto: "product3.jpeg", store:"wallmart", desc:"a life saver on a bad hair day", pic:"prod3_other.jpeg" },
+    { productName: "shampoo", price: 50, productPhoto: "product4.jpeg", store:"giant", desc:"just a standard hair product", pic:"prod4_other.jpeg" },
   ];
   return (
     <div className="container">
@@ -20,6 +20,9 @@ function App() {
             productName={item.productName}
             price={item.price}
             productPhoto={item.productPhoto}
+            store={item.store}
+            desc={item.desc}
+            pic={item.pic}
           ></ShoppingItem>
         );
       })}
